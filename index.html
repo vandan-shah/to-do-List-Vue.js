@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Sansita+Swashed:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/b86940d49d.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+        <title>to do list</title>
+    </head>
+    <body>
+
+        <!-- HEADER -->
+
+        <div id="app">
+            <product-details></product-details>
+        </div>
+
+        <!-- Main JS -->
+        <script src="main.js"></script>
+
+        <!-- Vue Components -->
+        <script src="productDetails.js"></script>
+        <script src="to-do.js"></script>
+        <script src="list.js"></script>
+
+        <!-- Mount app -->
+        <script>
+            const mountedApp = app.mount('#app')
+        </script>
+
+
+    </body>
+</html>
