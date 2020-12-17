@@ -1,14 +1,21 @@
-app.component('to-do', {
-    template:
-    /*html*/
-    `<div>
+<template>
+    <div>
         <form @submit.prevent="onSubmit">
             <input class="todo-input" type="text" placeholder="ADD TODO HERE..." v-model="todo">
             <button class="todo-button" type="submit">
                 <i class="fa fa-check"></i>
             </button>
         </form>
-    </div>`,
+    </div>
+</template>
+
+<script>
+
+
+
+
+export default {
+
     data() {
         return {
             todo: ''
@@ -16,6 +23,11 @@ app.component('to-do', {
     },
     methods: {
         onSubmit() {
+            if (this.todo === '') {
+                alert('Please fill in the data')
+                return
+            }
+
             let todoAnswer = {
                 todo: this.todo
             }
@@ -24,4 +36,9 @@ app.component('to-do', {
             this.todo = ''
         }
     }
-})
+}
+</script>
+
+<style>
+
+</style>

@@ -1,3 +1,43 @@
+<template>
+  <div id="app">
+    <header>
+        <h1>
+            <i class="fas fa-th-list"></i> TO-DO LIST
+        </h1>
+    </header>
+
+        <!-- BODY -->
+
+        <todo @todo-submitted="updateTodo"></todo>
+        <list :todos="todos"></list>
+  </div>
+</template>
+
+<script>
+
+import Todo from './components/Todo.vue'
+import List from './components/List.vue'
+
+
+export default {
+    data() {
+        return {
+            todos: []
+        }
+    },
+    methods: {
+        updateTodo(todo) {
+            this.todos.push(todo)
+        }
+    },
+    components: {
+        Todo,
+        List
+    }
+}
+</script>
+
+<style>
 * {
     margin: 0;
     padding: 0;
@@ -83,3 +123,4 @@ form button {
 .fa-minus-circle {
     pointer-events: none;
 }
+</style>
